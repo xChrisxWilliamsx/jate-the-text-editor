@@ -60,6 +60,10 @@ h1 {
   display: none;
 }
 
+.hideBtn {  
+  display: none;
+}
+
 @keyframes rotate-forever {
   0% {
     transform: rotate(0deg);
