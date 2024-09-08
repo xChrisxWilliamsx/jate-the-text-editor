@@ -3,13 +3,6 @@ const WebpackPwaManifest = require('webpack-pwa-manifest');
 const path = require('path');
 const { InjectManifest } = require('workbox-webpack-plugin');
 
-// TODO: Add and configure workbox plugins for a service worker and manifest file.
-//--
-
-// TODO: Add CSS loaders and babel to webpack.
-//--
-
-
 module.exports = () => {
   return {
     mode: 'development',
@@ -33,8 +26,8 @@ module.exports = () => {
         description: 'Your premier, on the go, text editor that works in all environments!',
         background_color: '#272822',
         theme_color: '#43315F',
-        start_url: './',
-        publicPath: './',
+        start_url: '/',
+        publicPath: '/',
         icons: [
           {
             src: path.resolve('./src/images/logo.png'),
@@ -45,7 +38,7 @@ module.exports = () => {
       }),
       new InjectManifest({
         swSrc: './src-sw.js',
-        swDest: 'service-worker.js',
+        swDest: 'src-sw.js',
       }), 
 
     ],

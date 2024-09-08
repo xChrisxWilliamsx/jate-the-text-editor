@@ -21,7 +21,7 @@ install.addEventListener('click', async () => {
             console.log('User dismissed the install prompt');
         }
         deferredPrompt = null;
-        install.style.display = 'none';
+        install.style.display = 'none !important';
     }
 });
 
@@ -29,5 +29,5 @@ install.addEventListener('click', async () => {
 window.addEventListener('appinstalled', (event) => {
     deferredPrompt = null;
     console.log('PWA was installed');
-    install.style.display = 'none';
+    install.style.display = 'none !important';
 });
